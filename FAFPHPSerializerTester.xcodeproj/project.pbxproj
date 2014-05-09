@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4AADFFD6191C8E1200115B77 /* FAFPHPSerializer_private.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4AADFFD3191C8E1200115B77 /* FAFPHPSerializer_private.h */; };
+		4AADFFD7191C8E1200115B77 /* FAFPHPSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AADFFD4191C8E1200115B77 /* FAFPHPSerializer.m */; };
+		4AADFFD8191C8E1200115B77 /* FAFPHPSerializer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4AADFFD5191C8E1200115B77 /* FAFPHPSerializer.h */; };
+		4AADFFD9191C8E1200115B77 /* FAFPHPSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AADFFD4191C8E1200115B77 /* FAFPHPSerializer.m */; };
+		4AADFFDE191C8E5200115B77 /* FAFPHPSerializer-main-tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AADFFDD191C8E5200115B77 /* FAFPHPSerializer-main-tests.m */; };
+		8DD76F9A0486AA7600D96B5E /* FAFPHPSerializerTester.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* FAFPHPSerializerTester.m */; settings = {ATTRIBUTES = (); }; };
+		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
+		8DD76F9F0486AA7600D96B5E /* FAFPHPSerializerTester.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* FAFPHPSerializerTester.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4AADFFCE191C8E0100115B77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DD76F960486AA7600D96B5E /* FAFPHPSerializerTester */;
+			remoteInfo = FAFPHPSerializerTester;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F9E0486AA7600D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76F9F0486AA7600D96B5E /* FAFPHPSerializerTester.1 in CopyFiles */,
+				4AADFFD6191C8E1200115B77 /* FAFPHPSerializer_private.h in CopyFiles */,
+				4AADFFD8191C8E1200115B77 /* FAFPHPSerializer.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* FAFPHPSerializerTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAFPHPSerializerTester.m; sourceTree = "<group>"; };
+		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32A70AAB03705E1F00C91783 /* FAFPHPSerializerTester_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAFPHPSerializerTester_Prefix.pch; sourceTree = "<group>"; };
+		4AADFFC6191C8DFC00115B77 /* FAFPHPSerializerTestUnit.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FAFPHPSerializerTestUnit.octest; path = build/Debug/FAFPHPSerializerTestUnit.octest; sourceTree = "<group>"; };
+		4AADFFC7191C8DFC00115B77 /* FAFPHPSerializerTestUnit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "FAFPHPSerializerTestUnit-Info.plist"; sourceTree = "<group>"; };
+		4AADFFD3191C8E1200115B77 /* FAFPHPSerializer_private.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FAFPHPSerializer_private.h; sourceTree = "<group>"; };
+		4AADFFD4191C8E1200115B77 /* FAFPHPSerializer.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = FAFPHPSerializer.m; sourceTree = "<group>"; };
+		4AADFFD5191C8E1200115B77 /* FAFPHPSerializer.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = FAFPHPSerializer.h; sourceTree = "<group>"; };
+		4AADFFDC191C8E5200115B77 /* FAFPHPSerializer-main-tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FAFPHPSerializer-main-tests.h"; sourceTree = "<group>"; };
+		4AADFFDD191C8E5200115B77 /* FAFPHPSerializer-main-tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FAFPHPSerializer-main-tests.m"; sourceTree = "<group>"; };
+		8DD76FA10486AA7600D96B5E /* FAFPHPSerializerTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FAFPHPSerializerTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6859EA3029092ED04C91782 /* FAFPHPSerializerTester.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = FAFPHPSerializerTester.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4AADFFC3191C8DFC00115B77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD76F9B0486AA7600D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* FAFPHPSerializerTester */ = {
+			isa = PBXGroup;
+			children = (
+				4AADFFDB191C8E3900115B77 /* Tests */,
+				4AADFFDA191C8E1A00115B77 /* FAFPHPSerializer */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859EA2029092E104C91782 /* Documentation */,
+				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				4AADFFC7191C8DFC00115B77 /* FAFPHPSerializerTestUnit-Info.plist */,
+			);
+			name = FAFPHPSerializerTester;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				32A70AAB03705E1F00C91783 /* FAFPHPSerializerTester_Prefix.pch */,
+				08FB7796FE84155DC02AAC07 /* FAFPHPSerializerTester.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				08FB779EFE84155DC02AAC07 /* Foundation.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76FA10486AA7600D96B5E /* FAFPHPSerializerTester */,
+				4AADFFC6191C8DFC00115B77 /* FAFPHPSerializerTestUnit.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4AADFFDA191C8E1A00115B77 /* FAFPHPSerializer */ = {
+			isa = PBXGroup;
+			children = (
+				4AADFFD3191C8E1200115B77 /* FAFPHPSerializer_private.h */,
+				4AADFFD5191C8E1200115B77 /* FAFPHPSerializer.h */,
+				4AADFFD4191C8E1200115B77 /* FAFPHPSerializer.m */,
+			);
+			name = FAFPHPSerializer;
+			sourceTree = "<group>";
+		};
+		4AADFFDB191C8E3900115B77 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4AADFFDC191C8E5200115B77 /* FAFPHPSerializer-main-tests.h */,
+				4AADFFDD191C8E5200115B77 /* FAFPHPSerializer-main-tests.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		C6859EA2029092E104C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6859EA3029092ED04C91782 /* FAFPHPSerializerTester.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4AADFFC5191C8DFC00115B77 /* FAFPHPSerializerTestUnit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AADFFC9191C8DFD00115B77 /* Build configuration list for PBXNativeTarget "FAFPHPSerializerTestUnit" */;
+			buildPhases = (
+				4AADFFC1191C8DFC00115B77 /* Resources */,
+				4AADFFC2191C8DFC00115B77 /* Sources */,
+				4AADFFC3191C8DFC00115B77 /* Frameworks */,
+				4AADFFC4191C8DFC00115B77 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4AADFFCF191C8E0100115B77 /* PBXTargetDependency */,
+			);
+			name = FAFPHPSerializerTestUnit;
+			productName = FAFPHPSerializerTestUnit;
+			productReference = 4AADFFC6191C8DFC00115B77 /* FAFPHPSerializerTestUnit.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8DD76F960486AA7600D96B5E /* FAFPHPSerializerTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB927408733DD40010E9CD /* Build configuration list for PBXNativeTarget "FAFPHPSerializerTester" */;
+			buildPhases = (
+				8DD76F990486AA7600D96B5E /* Sources */,
+				8DD76F9B0486AA7600D96B5E /* Frameworks */,
+				8DD76F9E0486AA7600D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FAFPHPSerializerTester;
+			productInstallPath = "$(HOME)/bin";
+			productName = FAFPHPSerializerTester;
+			productReference = 8DD76FA10486AA7600D96B5E /* FAFPHPSerializerTester */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "FAFPHPSerializerTester" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* FAFPHPSerializerTester */;
+			projectDirPath = "";
+			targets = (
+				8DD76F960486AA7600D96B5E /* FAFPHPSerializerTester */,
+				4AADFFC5191C8DFC00115B77 /* FAFPHPSerializerTestUnit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4AADFFC1191C8DFC00115B77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AADFFC4191C8DFC00115B77 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4AADFFC2191C8DFC00115B77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AADFFD9191C8E1200115B77 /* FAFPHPSerializer.m in Sources */,
+				4AADFFDE191C8E5200115B77 /* FAFPHPSerializer-main-tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DD76F990486AA7600D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F9A0486AA7600D96B5E /* FAFPHPSerializerTester.m in Sources */,
+				4AADFFD7191C8E1200115B77 /* FAFPHPSerializer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4AADFFCF191C8E0100115B77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DD76F960486AA7600D96B5E /* FAFPHPSerializerTester */;
+			targetProxy = 4AADFFCE191C8E0100115B77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB927508733DD40010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FAFPHPSerializerTester_Prefix.pch;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = FAFPHPSerializerTester;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB927608733DD40010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FAFPHPSerializerTester_Prefix.pch;
+				INSTALL_PATH = "$(HOME)/bin";
+				PRODUCT_NAME = FAFPHPSerializerTester;
+			};
+			name = Release;
+		};
+		1DEB927908733DD40010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Debug;
+		};
+		1DEB927A08733DD40010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+			};
+			name = Release;
+		};
+		4AADFFCA191C8DFD00115B77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "FAFPHPSerializerTestUnit-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = FAFPHPSerializerTestUnit;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		4AADFFCB191C8DFD00115B77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "FAFPHPSerializerTestUnit-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = FAFPHPSerializerTestUnit;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB927408733DD40010E9CD /* Build configuration list for PBXNativeTarget "FAFPHPSerializerTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB927508733DD40010E9CD /* Debug */,
+				1DEB927608733DD40010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "FAFPHPSerializerTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB927908733DD40010E9CD /* Debug */,
+				1DEB927A08733DD40010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AADFFC9191C8DFD00115B77 /* Build configuration list for PBXNativeTarget "FAFPHPSerializerTestUnit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AADFFCA191C8DFD00115B77 /* Debug */,
+				4AADFFCB191C8DFD00115B77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
