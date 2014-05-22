@@ -313,7 +313,7 @@
 							<real>274</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>11 73 1259 673 0 0 1280 746 </string>
+						<string>56 67 1259 673 0 0 1280 1002 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -343,14 +343,14 @@
 										<key>_historyCapacity</key>
 										<integer>20</integer>
 										<key>bookmark</key>
-										<string>4AAD000E191CB4CF00115B77</string>
+										<string>4A442A4E192E0C0300FD393F</string>
 										<key>history</key>
 										<array>
 											<string>4AADFFED191C90F800115B77</string>
 											<string>4AADFFEE191C90F800115B77</string>
 											<string>4AAD0007191CB4CF00115B77</string>
 											<string>4AAD0008191CB4CF00115B77</string>
-											<string>4AAD0009191CB4CF00115B77</string>
+											<string>4AAD003C191CBF0800115B77</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -359,10 +359,6 @@
 											<string>4AADFFF4191C90F800115B77</string>
 											<string>4AADFFF5191C90F800115B77</string>
 											<string>4AADFFF8191C90F800115B77</string>
-											<string>4AAD000A191CB4CF00115B77</string>
-											<string>4AAD000B191CB4CF00115B77</string>
-											<string>4AAD000C191CB4CF00115B77</string>
-											<string>4AAD000D191CB4CF00115B77</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -376,7 +372,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {963, 627}}</string>
 								<key>RubberWindowFrame</key>
-								<string>11 73 1259 673 0 0 1280 746 </string>
+								<string>56 67 1259 673 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -396,7 +392,7 @@
 								<key>Frame</key>
 								<string>{{0, 632}, {963, 0}}</string>
 								<key>RubberWindowFrame</key>
-								<string>11 73 1259 673 0 0 1280 746 </string>
+								<string>56 67 1259 673 0 0 1280 1002 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -420,9 +416,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>4AAD000F191CB4CF00115B77</string>
+				<string>4A442A4A192E0B4B00FD393F</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>4AAD0010191CB4CF00115B77</string>
+				<string>4A442A4B192E0B4B00FD393F</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -541,7 +537,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>421311695.33785897</real>
+	<real>422447917.70592201</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -556,11 +552,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>4AADFFE6191C90B000115B77</string>
 		<string>/Volumes/Iomega-1T-A/Projects/FAFPHPSerializer/FAFPHPSerializer-master/FAFPHPSerializerTester.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>11 73 1259 673 0 0 1280 746 </string>
+	<string>56 67 1259 673 0 0 1280 1002 </string>
 	<key>WindowTools</key>
 	<array>
 		<dict>
@@ -581,7 +576,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>FAFPHPSerializer-main-tests.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -637,7 +632,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>4AADFFE6191C90B000115B77</string>
-				<string>4AAD0003191CB3C500115B77</string>
+				<string>4AAD0036191CBED000115B77</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

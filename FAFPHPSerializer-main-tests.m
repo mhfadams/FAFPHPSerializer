@@ -34,4 +34,15 @@
 	STAssertEqualObjects(items, result, nil);
 }
 
+- (void) test_PHP_source_Array
+{
+	FAFPHPSerializer* serializer = [[[FAFPHPSerializer alloc] init] autorelease];
+	
+	
+	NSArray* array = [NSArray arrayWithObjects:[NSArray arrayWithObjects:@"Allow", @"Group", @"all", nil], [NSArray arrayWithObjects:@"Deny", @"User", @"mhfadams", nil], nil];
+	NSString* result = [serializer phpSourceForArray:array];
+	
+	STAssertEqualObjects(@"Array(Array('Allow', 'Group', 'all'), Array('Deny', 'User', 'mhfadams'))", result, nil);
+}
+
 @end
