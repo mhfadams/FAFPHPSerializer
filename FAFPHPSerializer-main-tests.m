@@ -23,13 +23,24 @@
 	STAssertEqualObjects(@"a:3:{i:0;s:5:\"happy\";i:1;i:6;i:2;s:3:\"sad\";}", result, nil);
 }
 
-- (void) test_unserializeItem_Array
+- (void) test_unserializeItem_Array_1
 {
 	FAFPHPSerializer* phpSerializer = [[[FAFPHPSerializer alloc] init] autorelease];
 	
 	
-	NSString* items = [NSArray arrayWithObjects:@"happy", [NSNumber numberWithInt:6], @"sad", nil];
+	NSArray* items = [NSArray arrayWithObjects:@"happy", [NSNumber numberWithInt:6], @"sad", nil];
 	NSArray* result = [phpSerializer unserializeItem:@"a:3:{i:0;s:5:\"happy\";i:1;i:6;i:2;s:3:\"sad\";}"];
+	
+	STAssertEqualObjects(items, result, nil);
+}
+
+- (void) test_unserializeItem_Array_2
+{
+	FAFPHPSerializer* phpSerializer = [[[FAFPHPSerializer alloc] init] autorelease];
+	
+	
+	NSArray* items = [NSArray arrayWithObjects:@"Allow", @"Group", @"all", nil];
+	NSArray* result = [phpSerializer unserializeItem:@"a:3:{i:0;s:5:\"Allow\";i:1;s:5:\"Group\";i:2;s:3:\"all\";}"];
 	
 	STAssertEqualObjects(items, result, nil);
 }

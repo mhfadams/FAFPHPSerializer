@@ -191,6 +191,7 @@
 	[scanner setScanLocation:([scanner scanLocation] + 1)];
 
 	NSMutableDictionary* output = [NSMutableDictionary new];
+	NSMutableArray* items = [NSMutableArray new];
 	if (arrayCount == 0) return output;
 	id key;
 	id value;
@@ -255,6 +256,7 @@
 			//NSLog(@"value = %@", value);
 			
 			[output setObject:value forKey:key];
+			[items addObject:value];
 		}
 		
 	}	
@@ -263,8 +265,13 @@
 	
 	
 	
-	if (isArray) {
-		return [output allValues];
+	if (isArray)
+	{
+		return items;
+	}
+	else
+	{
+		[output allValues];
 	}
 	
 	return output;
