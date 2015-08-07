@@ -178,6 +178,8 @@
 	// ... because PHP uses the same class for both arrays and dictionaries
 	// ... if all keys are numbers and in sequence then return as array
 	
+	// while converting we create both array and dict since we dont know which kind we will need
+	
 	NSString* string;
 	
 	[scanner setScanLocation:([scanner scanLocation] + 1)];
@@ -192,7 +194,8 @@
 
 	NSMutableDictionary* output = [NSMutableDictionary new];
 	NSMutableArray* items = [NSMutableArray new];
-	if (arrayCount == 0) return output;
+	if ( arrayCount == 0 )
+		return items;
 	id key;
 	id value;
 	BOOL isArray = YES;
@@ -267,14 +270,14 @@
 	
 	if (isArray)
 	{
-		return items;
+		return items; // return array form
 	}
 	else
 	{
-		[output allValues];
+		//[output allValues];
 	}
 	
-	return output;
+	return output; // return dictionary form
 	
 }
 

@@ -45,6 +45,16 @@
 	STAssertEqualObjects(items, result, nil);
 }
 
+- (void) test_unserializeItem_Empty_Array
+{
+	FAFPHPSerializer* phpSerializer = [[[FAFPHPSerializer alloc] init] autorelease];
+	
+	
+	NSArray* result = [phpSerializer unserializeItem:@"a:0:{}"];
+	
+	STAssertEqualObjects([NSArray new], result, nil);
+}
+
 - (void) test_PHP_source_Array
 {
 	FAFPHPSerializer* serializer = [[[FAFPHPSerializer alloc] init] autorelease];
