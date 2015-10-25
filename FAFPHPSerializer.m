@@ -8,6 +8,11 @@
 #import "FAFPHPSerializer_private.h"
 #import "FAFPHPSerializer.h"
 
+#ifdef IN_TEST_UNIT
+	#import "FAFStringScanner.h"
+#else
+	#import <FAFFoundationExtensions/FAFStringScanner.h>
+#endif
 
 @implementation FAFPHPSerializer
 
@@ -35,19 +40,18 @@
 	if ( (!item) || (item == NULL) || [item isKindOfClass:[NSNull class]]) return nil;
 	//NSLog(@"[PHPSerializer unserializeItem:%@]", item);
 	
-	NSScanner* scanner = [[[NSScanner alloc] initWithString:item] retain];
-	
+	//NSScanner* scanner = [[[NSScanner alloc] initWithString:item] retain];
+	FAFStringScanner* scanner = [[[FAFStringScanner alloc] initWithString:item] autorelease];
 	//[scanner setCharactersToBeSkipped:[NSSet set]];
 	
 	NSString* string;
 	
 	
-	id output;
-	while ([scanner isAtEnd] == NO) {
-		[scanner scanUpToString:@":" intoString:&string];
-		//[scanner setScanLocation:([scanner scanLocation] + 1)];
+	id output = @"";
+	while ( ! [scanner isAtEnd] )
+	{
+		string  = [scanner readUntilStringAdvancingPast:@":"];
 		
-		//NSLog(string);
 		if ([string isEqualToString:@"a"]) {
 			output = [self unserializeArray:scanner];
 		} else if ([string isEqualToString:@"s"]) {
@@ -57,7 +61,6 @@
 		} else if ([string isEqualToString:@"b"]) {
 			output = [self unserializeBoolean:scanner];
 		}
-		string = @"";
 	}	
 	
 	return output;
@@ -132,47 +135,44 @@
 	
 }
 
-- (NSNumber*) unserializeNumber:(NSScanner*)scanner {
+- (NSNumber*) unserializeNumber:(FAFStringScanner*)scanner {
 	NSString* string;
-	[scanner setScanLocation:([scanner scanLocation] + 1)];
-	[scanner scanUpToString:@";" intoString:&string];
-	[scanner setScanLocation:([scanner scanLocation] + 1)];
+	string = [scanner readUntilStringAdvancingPast:@";"];
+	//NSLog(@"unserializeNumber: %@", string);
 	return [NSNumber numberWithInt:[string intValue]];
 }
 
-- (NSString*) unserializeString:(NSScanner*)scanner {
+- (NSString*) unserializeString:(FAFStringScanner*)scanner {
 	NSString* len;
-	[scanner setScanLocation:([scanner scanLocation] + 1)];
-	[scanner scanUpToString:@":" intoString:&len];
+	len = [scanner readUntilStringAdvancingPast:@":"];
 	int stringLength = [len intValue];
 	//NSLog(@"stringLength = %d", stringLength);
+	NSString* string;
 	
-	NSString* string = @"";
-	[scanner scanUpToString:@"\"" intoString:NULL]; // skip opening quote
-	[scanner setScanLocation:([scanner scanLocation] + 1)];
-	// although we know the length of the string,
-	// ... NSScanner doesn't let us scanForLength, so a workaround/
-	// ... seems the simplest to me to do the following
-	while ([string length] < stringLength) {
-		[scanner scanUpToString:@"\"" intoString:&string];
-		//[scanner setScanLocation:([scanner scanLocation] + 1)];
+	if (stringLength == 0)
+	{
+		(void)[scanner readUntilStringAdvancingPast:@";"]; // skip closing semi-colon
+		return @"";
 	}
-
-	[scanner scanUpToString:@";" intoString:NULL]; // skip closing semi-colon
-	[scanner setScanLocation:([scanner scanLocation] + 1)];
+	else
+	{
+		string = [scanner readBalanced];
+		string = [string substringWithRange:NSMakeRange(1, ([string length] - 2))];
+		(void)[scanner readUntilStringAdvancingPast:@";"]; // skip closing semi-colon
+	}
+	//NSLog(@"unserializeString: %@", string);
 
 	return string;
 }
 
-- (NSNumber*) unserializeBoolean:(NSScanner*)scanner {
+- (NSNumber*) unserializeBoolean:(FAFStringScanner*)scanner {
 	NSString* string;
-	[scanner setScanLocation:([scanner scanLocation] + 1)];
-	[scanner scanUpToString:@";" intoString:&string];
-	[scanner setScanLocation:([scanner scanLocation] + 1)];
+	string = [scanner readUntilStringAdvancingPast:@";"];
+	//NSLog(@"unserializeBoolean: %@", string);
 	return [NSNumber numberWithInt:[string intValue]];
 }
 
-- (id) unserializeArray:(NSScanner*)scanner {
+- (id) unserializeArray:(FAFStringScanner*)scanner {
 	
 	// This will return a NSArray or NSDictionary
 	// ... because PHP uses the same class for both arrays and dictionaries
@@ -182,89 +182,79 @@
 	
 	NSString* string;
 	
-	[scanner setScanLocation:([scanner scanLocation] + 1)];
-	[scanner scanUpToString:@":" intoString:&string];
-	[scanner setScanLocation:([scanner scanLocation] + 1)];
+	string  = [scanner readUntilStringAdvancingPast:@":"];
 	int arrayCount = [string intValue];
 	string = @"";
 	
 
-	[scanner scanUpToString:@"{" intoString:NULL];
-	[scanner setScanLocation:([scanner scanLocation] + 1)];
+	[scanner readUntilStringAdvancingPast:@"{"];
 
 	NSMutableDictionary* output = [NSMutableDictionary new];
 	NSMutableArray* items = [NSMutableArray new];
 	if ( arrayCount == 0 )
 		return items;
-	id key;
-	id value;
+	id key = nil;
+	id value = @"";
 	BOOL isArray = YES;
 	int idx = -1; // for isArray check
-	BOOL shouldStop = NO;
 	
-	while (! shouldStop ) {
+	for (int i = 0; i < arrayCount; i++)
+	{
 		
-		// unfortunately NSScanner doesnt have a nextChar, so workaround
-		int loc1 = [scanner scanLocation];
-		[scanner scanUpToString:@"}" intoString:NULL];
-		int loc2 = [scanner scanLocation];
-		if (loc1 >= loc2) {
-			shouldStop = YES;
-		}
-		[scanner setScanLocation:loc1];
-		//[scanner setScanLocation:([scanner scanLocation] - 2)];
-		if ([scanner isAtEnd]) {
-			shouldStop = YES;
-		}
-		if (! shouldStop) {
-			
-			// get the key
-			[scanner scanUpToString:@":" intoString:&string];
-			if ([string isEqualToString:@"s"]) {
-				key = [self unserializeString:scanner];
-			} else if ([string isEqualToString:@"i"]) {
-				key = [self unserializeNumber:scanner];
-			} else {
-				key = string;
-			}
-			if ( ! ([key isKindOfClass:[NSNumber class]]) ) {
-				isArray = NO;  // index not a number
-				//NSLog(@"index not a number");
-			} else {
-				if ([key intValue] > idx) {
-					idx = idx + 1;
-				} else {
-					isArray = NO; // indexes not sequential
-					//NSLog(@"indexes not sequential");
-				}
-			}
-			//NSLog(@"key = %@", key);
-			//if (!isArray) NSLog(@"not an Array");
-			
-			
-			string = @"";
+		if ([scanner isAtEnd])
+			break;
 		
-			[scanner scanUpToString:@":" intoString:&string];
-			//[scanner setScanLocation:([scanner scanLocation] - 2)];
-			// get the value
-			if ([string isEqualToString:@"a"]) {
-				value = [self unserializeArray:scanner];
-			} else if ([string isEqualToString:@"s"]) {
-				value = [self unserializeString:scanner];
-			} else if ([string isEqualToString:@"i"]) {
-				value = [self unserializeNumber:scanner];
-			} else if ([string isEqualToString:@"b"]) {
-				value = [self unserializeBoolean:scanner];
+		// get the key
+		string = [scanner readUntilStringAdvancingPast:@":"];
+		if ([string isEqualToString:@"s"]) {
+			key = [self unserializeString:scanner];
+		} else if ([string isEqualToString:@"i"]) {
+			key = [self unserializeNumber:scanner];
+		} else {
+			key = string;
+		}
+		if ( ! ([key isKindOfClass:[NSNumber class]]) ) {
+			isArray = NO;  // index not a number
+			//NSLog(@"index not a number");
+		} else {
+			if ([key intValue] > idx) {
+				idx = idx + 1;
+			} else {
+				isArray = NO; // indexes not sequential
+				//NSLog(@"indexes not sequential");
 			}
-			//NSLog(@"value = %@", value);
-			
+		}
+		//NSLog(@"key = %@", key);
+		//if (!isArray) NSLog(@"not an Array");
+		
+		
+		string = @"";
+	
+		NSString* matchedString;
+		string  = [scanner readUntilStringsAdvancingPast:[NSArray arrayWithObjects:@":", @";", nil] matchString:&matchedString];
+		// get the value
+		if ([string isEqualToString:@"a"]) {
+			value = [self unserializeArray:scanner];
+		} else if ([string isEqualToString:@"s"]) {
+			value = [self unserializeString:scanner];
+		} else if ([string isEqualToString:@"i"]) {
+			value = [self unserializeNumber:scanner];
+		} else if ([string isEqualToString:@"b"]) {
+			value = [self unserializeBoolean:scanner];
+		} else {
+			;
+		}
+		//NSLog(@"value = %@", value);
+		//NSLog(@"key = %@", key);
+		
+		//if ( value )
 			[output setObject:value forKey:key];
-			[items addObject:value];
-		}
+
+		
+		[items addObject:value];
 		
 	}	
-	//[scanner scanUpToString:@"}" intoString:NULL]; // skip closing brace
-	[scanner setScanLocation:([scanner scanLocation] + 1)];
+	[scanner readUntilStringAdvancingPast:@"}"]; // skip closing brace
 	
 	
 	

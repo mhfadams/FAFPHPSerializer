@@ -8,6 +8,7 @@
 #import <Cocoa/Cocoa.h>
 
 #import "FAFPHPSerializer.h"
+@class FAFStringScanner;
 
 @interface FAFPHPSerializer(FAFPHPSerializer_private)
 
@@ -16,9 +17,9 @@
 - (NSString*) serializeArray:(NSArray*)array;
 - (NSString*) serializeDictionary:(NSDictionary*)dictionary;
 
-- (NSNumber*) unserializeNumber:(NSScanner*)scanner;
-- (NSString*) unserializeString:(NSScanner*)scanner;
-- (NSNumber*) unserializeBoolean:(NSScanner*)scanner;
-- (id) unserializeArray:(NSScanner*)scanner;
+- (NSNumber*) unserializeNumber:(FAFStringScanner*)scanner;
+- (NSString*) unserializeString:(FAFStringScanner*)scanner;
+- (NSNumber*) unserializeBoolean:(FAFStringScanner*)scanner;
+- (id) unserializeArray:(FAFStringScanner*)scanner;
 
 @end
