@@ -156,9 +156,9 @@
 	}
 	else
 	{
-		string = [scanner readBalanced];
-		string = [string substringWithRange:NSMakeRange(1, ([string length] - 2))];
-		(void)[scanner readUntilStringAdvancingPast:@";"]; // skip closing semi-colon
+		[scanner advance:1]; // past opening quote
+		string = [scanner readForLengthAdvancing:stringLength];
+		[scanner advance:2]; // past closing quote and semicolon
 	}
 	//NSLog(@"unserializeString: %@", string);
 
