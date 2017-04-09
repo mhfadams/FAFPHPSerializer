@@ -16,6 +16,17 @@
 
 @implementation FAFPHPSerializer
 
+- (BOOL)shouldAutoGuessEmptyStrings {
+    return _shouldAutoGuessEmptyStrings;
+}
+
+- (void)setShouldAutoGuessEmptyStrings:(BOOL)value {
+    if (_shouldAutoGuessEmptyStrings != value) {
+        _shouldAutoGuessEmptyStrings = value;
+    }
+}
+
+
 - (NSString*) serializeItem:(id)item {
 	if ( (!item) || (item == NULL) || [item isKindOfClass:[NSNull class]]) return [self serializeArray:[NSArray new]];
 	//NSLog(@"-[PHPSerializer serializeItem:%@]", item);
@@ -158,6 +169,16 @@
 	{
 		[scanner advance:1]; // past opening quote
 		string = [scanner readForLengthAdvancing:stringLength];
+		if ( ([string length] == 0) || (([string length] > 2) && [[string substringToIndex:2] isEqual:@"\";"]) )
+		{
+			if (_shouldAutoGuessEmptyStrings)
+			{
+				[scanner advance:((-1) * [string length])];
+				string = @"";
+			}
+			else
+				fprintf(stderr, [@"FAFPHPSerializer: Warning: string appears to be improperly counted. Output may be garbled.\n" cStringUsingEncoding:NSUTF8StringEncoding]);
+		}
 		[scanner advance:2]; // past closing quote and semicolon
 	}
 	//NSLog(@"unserializeString: %@", string);
