@@ -167,5 +167,26 @@
 }
 
 
+ - (void) test_unserializeItem_decimals_2
+ {
+	 FAFPHPSerializer* phpSerializer = [[[FAFPHPSerializer alloc] init] autorelease];
+	 
+	 
+	 NSArray* items = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:7], @"CURFEW_AM",
+					   [NSNumber numberWithInt:23], @"CURFEW_PM",
+					   [NSNumber numberWithInt:11], @"FIRST_RUN_END_TIME",
+					   [NSNumber numberWithFloat:13.6], @"FIRST_RUN_V_MAX",
+					   [NSNumber numberWithFloat:11.65], @"FIRST_RUN_V_MIN",
+					   [NSNumber numberWithInt:20], @"LAST_RUN_BEGIN_TIME",
+					   [NSNumber numberWithFloat:13.4], @"LAST_RUN_V_MAX",
+					   [NSNumber numberWithFloat:11.8], @"LAST_RUN_V_MIN",
+					   [NSNumber numberWithFloat:13.35], @"MID_DAY_V_MAX",
+					   [NSNumber numberWithFloat:11.6], @"MID_DAY_V_MIN", nil];
+	 NSArray* result = [phpSerializer unserializeItem:@"a:10:{s:15:\"FIRST_RUN_V_MIN\";d:11.65;s:13:\"MID_DAY_V_MAX\";d:13.35;s:14:\"LAST_RUN_V_MIN\";d:11.8;s:9:\"CURFEW_PM\";i:23;s:14:\"LAST_RUN_V_MAX\";d:13.4;s:9:\"CURFEW_AM\";i:7;s:13:\"MID_DAY_V_MIN\";d:11.6;s:18:\"FIRST_RUN_END_TIME\";i:11;s:19:\"LAST_RUN_BEGIN_TIME\";i:20;s:15:\"FIRST_RUN_V_MAX\";d:13.6;}"];
+	 
+	 STAssertEqualObjects(items, result, nil);
+ }
+ 
+
 
 @end

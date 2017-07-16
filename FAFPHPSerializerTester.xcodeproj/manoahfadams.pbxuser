@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 4AADFFBD191C8DEB00115B77 /* FAFPHPSerializerTester */;
+		activeTarget = 4AADFFC5191C8DFC00115B77 /* FAFPHPSerializerTestUnit */;
+		addToTargets = (
+			4AADFFC5191C8DFC00115B77 /* FAFPHPSerializerTestUnit */,
+		);
+		codeSenseManager = 4AADFFCD191C8DFD00115B77 /* Code sense */;
+		executables = (
+			4AADFFBD191C8DEB00115B77 /* FAFPHPSerializerTester */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					724,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					63,
+					20,
+					48.1626,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 422447917;
+			PBXWorkspaceStateSaveDate = 422447917;
+		};
+		perUserProjectItems = {
+			4A442A4E192E0C0300FD393F /* PBXTextBookmark */ = 4A442A4E192E0C0300FD393F /* PBXTextBookmark */;
+			4AAD0007191CB4CF00115B77 /* PBXTextBookmark */ = 4AAD0007191CB4CF00115B77 /* PBXTextBookmark */;
+			4AAD0008191CB4CF00115B77 /* PBXTextBookmark */ = 4AAD0008191CB4CF00115B77 /* PBXTextBookmark */;
+			4AAD003C191CBF0800115B77 /* PBXTextBookmark */ = 4AAD003C191CBF0800115B77 /* PBXTextBookmark */;
+			4AADFFED191C90F800115B77 /* PBXTextBookmark */ = 4AADFFED191C90F800115B77 /* PBXTextBookmark */;
+			4AADFFEE191C90F800115B77 /* PBXTextBookmark */ = 4AADFFEE191C90F800115B77 /* PBXTextBookmark */;
+			4AADFFF2191C90F800115B77 /* PBXTextBookmark */ = 4AADFFF2191C90F800115B77 /* PBXTextBookmark */;
+			4AADFFF3191C90F800115B77 /* PBXTextBookmark */ = 4AADFFF3191C90F800115B77 /* PBXTextBookmark */;
+			4AADFFF4191C90F800115B77 /* PBXTextBookmark */ = 4AADFFF4191C90F800115B77 /* PBXTextBookmark */;
+			4AADFFF5191C90F800115B77 /* PBXTextBookmark */ = 4AADFFF5191C90F800115B77 /* PBXTextBookmark */;
+			4AADFFF8191C90F800115B77 /* PBXTextBookmark */ = 4AADFFF8191C90F800115B77 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 4AADFFCC191C8DFD00115B77 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	4A442A4E192E0C0300FD393F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4AADFFDD191C8E5200115B77 /* FAFPHPSerializer-main-tests.m */;
+		name = "FAFPHPSerializer-main-tests.m: 43";
+		rLen = 0;
+		rLoc = 1378;
+		rType = 0;
+		vrLen = 1261;
+		vrLoc = 242;
+	};
+	4AAD0007191CB4CF00115B77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4AADFFD5191C8E1200115B77 /* FAFPHPSerializer.h */;
+		name = serializeItem;
+		rLen = 13;
+		rLoc = 344;
+		rType = 0;
+		vrLen = 367;
+		vrLoc = 0;
+	};
+	4AAD0008191CB4CF00115B77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4AADFFD4191C8E1200115B77 /* FAFPHPSerializer.m */;
+		name = "FAFPHPSerializer.m: 284";
+		rLen = 0;
+		rLoc = 9361;
+		rType = 0;
+		vrLen = 1292;
+		vrLoc = 0;
+	};
+	4AAD003C191CBF0800115B77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4AADFFDD191C8E5200115B77 /* FAFPHPSerializer-main-tests.m */;
+		name = "FAFPHPSerializer-main-tests.m: 43";
+		rLen = 0;
+		rLoc = 1378;
+		rType = 0;
+		vrLen = 1260;
+		vrLoc = 243;
+	};
+	4AADFFBD191C8DEB00115B77 /* FAFPHPSerializerTester */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = FAFPHPSerializerTester;
+		sourceDirectories = (
+		);
+	};
+	4AADFFC5191C8DFC00115B77 /* FAFPHPSerializerTestUnit */ = {
+		activeExec = 0;
+	};
+	4AADFFCC191C8DFD00115B77 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	4AADFFCD191C8DFD00115B77 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	4AADFFD3191C8E1200115B77 /* FAFPHPSerializer_private.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {608, 421}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {608, 421}}";
+		};
+	};
+	4AADFFD4191C8E1200115B77 /* FAFPHPSerializer.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1020, 4992}}";
+			sepNavSelRange = "{9361, 0}";
+			sepNavVisRect = "{{0, 0}, {916, 595}}";
+		};
+	};
+	4AADFFD5191C8E1200115B77 /* FAFPHPSerializer.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {916, 595}}";
+			sepNavSelRange = "{219, 13}";
+			sepNavVisRect = "{{0, 0}, {916, 595}}";
+		};
+	};
+	4AADFFDC191C8E5200115B77 /* FAFPHPSerializer-main-tests.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {708, 522}}";
+			sepNavSelRange = "{268, 0}";
+			sepNavVisRect = "{{0, 0}, {708, 522}}";
+		};
+	};
+	4AADFFDD191C8E5200115B77 /* FAFPHPSerializer-main-tests.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1420, 784}}";
+			sepNavSelRange = "{1378, 0}";
+			sepNavVisRect = "{{0, 175}, {916, 595}}";
+		};
+	};
+	4AADFFED191C90F800115B77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4AADFFD3191C8E1200115B77 /* FAFPHPSerializer_private.h */;
+		name = "FAFPHPSerializer_private.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 666;
+		vrLoc = 0;
+	};
+	4AADFFEE191C90F800115B77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4AADFFDC191C8E5200115B77 /* FAFPHPSerializer-main-tests.h */;
+		name = "FAFPHPSerializer-main-tests.h: 13";
+		rLen = 0;
+		rLoc = 268;
+		rType = 0;
+		vrLen = 274;
+		vrLoc = 0;
+	};
+	4AADFFF2191C90F800115B77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4AADFFD3191C8E1200115B77 /* FAFPHPSerializer_private.h */;
+		name = "FAFPHPSerializer_private.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 666;
+		vrLoc = 0;
+	};
+	4AADFFF3191C90F800115B77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4AADFFDC191C8E5200115B77 /* FAFPHPSerializer-main-tests.h */;
+		name = "FAFPHPSerializer-main-tests.h: 13";
+		rLen = 0;
+		rLoc = 268;
+		rType = 0;
+		vrLen = 274;
+		vrLoc = 0;
+	};
+	4AADFFF4191C90F800115B77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4AADFFDD191C8E5200115B77 /* FAFPHPSerializer-main-tests.m */;
+		name = "FAFPHPSerializer-main-tests.m: 15";
+		rLen = 0;
+		rLoc = 658;
+		rType = 0;
+		vrLen = 282;
+		vrLoc = 0;
+	};
+	4AADFFF5191C90F800115B77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4AADFFD5191C8E1200115B77 /* FAFPHPSerializer.h */;
+		name = serializeItem;
+		rLen = 13;
+		rLoc = 344;
+		rType = 0;
+		vrLen = 367;
+		vrLoc = 0;
+	};
+	4AADFFF8191C90F800115B77 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4AADFFD4191C8E1200115B77 /* FAFPHPSerializer.m */;
+		name = "FAFPHPSerializer.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 937;
+		vrLoc = 1017;
+	};
+	8DD76F960486AA7600D96B5E /* FAFPHPSerializerTester */ = {
+		activeExec = 0;
+		executables = (
+			4AADFFBD191C8DEB00115B77 /* FAFPHPSerializerTester */,
+		);
+	};
+}
