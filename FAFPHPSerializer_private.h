@@ -20,6 +20,7 @@
 - (NSNumber*) unserializeNumber:(FAFStringScanner*)scanner;
 - (NSString*) unserializeString:(FAFStringScanner*)scanner;
 - (NSNumber*) unserializeBoolean:(FAFStringScanner*)scanner;
+- (NSNumber*) unserializeDecimal:(FAFStringScanner*)scanner;
 - (id) unserializeArray:(FAFStringScanner*)scanner;
 
 @end

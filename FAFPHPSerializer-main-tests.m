@@ -155,4 +155,17 @@
 	STAssertEqualObjects(@"jpg", [result objectForKey:@"fileType"], nil);
 }
 
+- (void) test_unserializeItem_decimals_1
+{
+	FAFPHPSerializer* phpSerializer = [[[FAFPHPSerializer alloc] init] autorelease];
+	
+	
+	NSArray* items = [NSArray arrayWithObjects:@"happy", [NSNumber numberWithFloat:6.4], @"sad", nil];
+	NSArray* result = [phpSerializer unserializeItem:@"a:3:{i:0;s:5:\"happy\";i:1;d:6.4;i:2;s:3:\"sad\";}"];
+	
+	STAssertEqualObjects(items, result, nil);
+}
+
+
+
 @end

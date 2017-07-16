@@ -71,6 +71,8 @@
 			output = [self unserializeNumber:scanner];
 		} else if ([string isEqualToString:@"b"]) {
 			output = [self unserializeBoolean:scanner];
+		} else if ([string isEqualToString:@"d"]) {
+			output = [self unserializeDecimal:scanner];
 		}
 	}	
 	
@@ -193,6 +195,14 @@
 	return [NSNumber numberWithInt:[string intValue]];
 }
 
+- (NSNumber*) unserializeDecimal:(FAFStringScanner*)scanner {
+	NSString* string;
+	string = [scanner readUntilStringAdvancingPast:@";"];
+	return [NSNumber numberWithFloat:[string floatValue]];
+}
+
+
+
 - (id) unserializeArray:(FAFStringScanner*)scanner {
 	
 	// This will return a NSArray or NSDictionary
@@ -260,6 +270,8 @@
 			value = [self unserializeString:scanner];
 		} else if ([string isEqualToString:@"i"]) {
 			value = [self unserializeNumber:scanner];
+		} else if ([string isEqualToString:@"d"]) {
+			value = [self unserializeDecimal:scanner];
 		} else if ([string isEqualToString:@"b"]) {
 			value = [self unserializeBoolean:scanner];
 		} else {
